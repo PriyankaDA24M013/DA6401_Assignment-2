@@ -82,7 +82,7 @@ Both models log their performance metrics to Weights & Biases, including:
 - NumPy
 - OpenCV (cv2)
 
-## Usage
+## Usage for Part-A
 
 1. Install the required dependencies:
 
@@ -107,6 +107,32 @@ train_model(best_config, sweep=True)
 ```python
 train_model(best_config, sweep=False)
 ```
+
+5. Evalution of Custom CNN model:
+   Resulted in 49.7 % accuracy on test data
+
+## Usage for Part-B
+
+1. Install the required dependencies:
+
+```bash
+pip install torch torchvision scikit-learn matplotlib wandb numpy opencv-python
+```
+
+2. Configure your Weights & Biases API key:
+
+```python
+wandb.login(key="your_api_key")
+```
+
+3. Run the ResNet model:
+
+```python
+resnet()
+```
+
+4. Evalution of Resnet model:
+   Resulted in 76.9 % accuracy on test data
 
 ## Monitoring and Evaluation
 
