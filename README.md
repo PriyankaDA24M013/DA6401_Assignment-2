@@ -1,11 +1,5 @@
 # DA6401_Assignment-2
 
-# iNaturalist Image Classification
-
-This repository contains deep learning models for classifying images from the iNaturalist_12K dataset, which includes natural images across 10 biological classes.
-
-## Project Overview
-
 This project explores two approaches to image classification:
 
 1. **Custom CNN Model**: A 5-layer convolutional neural network with configurable architecture
@@ -102,16 +96,16 @@ pip install torch torchvision scikit-learn matplotlib wandb numpy opencv-python
 wandb.login(key="your_api_key")
 ```
 
-3. Run the Custom CNN model:
+3. Run the sweep for best config of Custom CNN model:
+
+```python
+train_model(best_config, sweep=True)
+```
+
+4. Run the Custom CNN model:
 
 ```python
 train_model(best_config, sweep=False)
-```
-
-4. Run the Transfer Learning model:
-
-```python
-# Code is provided in the Part B section
 ```
 
 ## Monitoring and Evaluation
